@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+
+        table(border='1')
+            thead
+                tr
+                    th Description
+                    th Date
+                    th Hour
+                    th Durée
+                    th Distance parcourue (en m)
+                    th Freq min
+                    th Freq moy
+                    th Freq max
+            tbody
+                each val in data 
+                    tr
+                        td= val.description
+                        td= val.date
+                        td= val.beginHour
+                        td= val.duration
+                        td= val.distance
+                        td= val.freqMin
+                        td= val.freqMoy
+                        td= val.freqMax

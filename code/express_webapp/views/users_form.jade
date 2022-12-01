@@ -1,0 +1,65 @@
+extends layout
+
+block content
+
+    .nav(align='center')
+        ul
+            li
+                a.nav-link(href='/') Accueil
+            li
+                a.nav-link(href='/connect') Se connecter
+
+    h1 Bienvenue sur SportTrack
+    p Pour vous inscrire veuillez saisir vos informations ci-dessous : 
+
+    form(method='POST' action='/users/form')
+        #form-group
+            label Nom: 
+            br
+            input.form-control(name='lastname', type='text', required)
+        
+        #form-group
+            label Prénom:
+            br
+            input.form-control(name='firstname', type='text', required)
+
+        #form-group
+            label Date de naissance:
+            br
+            input.form-control(name='birthday', type='date', required)
+
+        #form-group
+            label H:
+            input.form-control(name='sexe', type='radio' ,value="Homme")
+
+        #form-group
+            label F:
+            input.form-control(name='sexe', type='radio' ,value="Femme")
+
+        #form-group
+            label Taille:
+            br
+            input.form-control(name='height', type='number' min='100' max='250', required)
+
+        #form-group
+            label Poids:
+            br
+            input.form-control(name='weight', type='number' min='40' max='300', required)    
+
+        #form-group
+            label Email:
+            br
+            input.form-control(name='email', type=';email', required)
+
+        #form-group
+            label Mot de passe:
+            br
+            input.form-control(name='password', type='password',pattern='(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}',title='Le mot de passe doit contenir 8 caractères dont un chiffre et une majuscule', required)
+
+        input.btn.btn-primary(type='submit' value='S\'inscrire')       
+
+
+        
+                                 
+
+

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+
+        table(border='1')
+            thead
+                tr
+                    th Nom
+                    th Prénom
+                    th Date de naissance
+                    th Sexe
+                    th Taille
+                    th Poids
+                    th Email
+            tbody
+                each val in data
+                    tr
+                        td= val.lastname
+                        td= val.firstname
+                        td= val.birthday
+                        td= val.sexe
+                        td= val.height
+                        td= val.weight
+                        td= val.email

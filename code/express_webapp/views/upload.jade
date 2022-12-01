@@ -1,0 +1,23 @@
+extends layout
+
+block content  
+
+    .nav(align='center')
+        ul
+            li
+                a.nav-link(href='/connect/account') Accueil
+            li
+                a.nav-link(href='/activities') Liste
+            li
+                a.nav-link(href='/connect/disconnect') Se deconnecter
+
+    h1 Upload un fichier d'activité
+    p Déposer votre fichier d'activité (.json) pour enregistrer vos activités
+    form(action='/upload', method='POST', enctype='multipart/form-data')
+        .input-group.mb-3
+            .input-group-prepend
+                span#inputGroupFileAddon01.input-group-text Upload
+            .custom-file
+                input#ActivityInput.custom-file-input(type='file', aria-describeby='inputGroupFileAddon01', name='activityFile' required)
+                label.custom-file-label(for='Activity Input') Fichier d'activité(.json)
+            button.btn.btn-primary(type='submit') Submit

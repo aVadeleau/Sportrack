@@ -1,0 +1,30 @@
+extends layout
+
+block content
+
+    .nav(align='center')
+        ul
+            li
+                a.nav-link(href='/') Accueil
+            li
+                a.nav-link(href='/users/form') S'inscrire
+
+ 
+    h1 Se connecter à SportTrack
+    p Pour vous connecter veuillez saisir vos identifiants : 
+
+    form(method='POST' action='/connect') 
+        #form-group
+            label Email:
+            br
+            input.form-control(name='email', type='email', required)
+
+        #form-group
+            label Mot de passe:
+            br
+            input.form-control(name='password', type='password', required)
+
+        input.btn.btn-primary(type='submit' value='Se connecter')                                
+
+
+                          
